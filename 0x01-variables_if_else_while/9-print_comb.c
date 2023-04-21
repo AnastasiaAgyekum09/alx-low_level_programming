@@ -5,13 +5,17 @@
  */
 int main(void)
 {
-	int n, i;
+	int num;
 
-	for (n = 0; n < 10; n++)
-		putchar(n + '0');
-	for (i = 0; i < 10; i++)
-		putchar(i + '0');
-		putchar(',');
+	for (num = 48 ; num < 58; num++)
+	{
+		putchar(num);
+		if (num != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
 
 	return (0);
