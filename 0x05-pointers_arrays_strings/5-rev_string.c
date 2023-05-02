@@ -2,25 +2,28 @@
 
 /**
  * rev_string - Reverse a string without new line
- * @s: string to reverse
+ * @s: input string
  * Return: void
  */
 
 void rev_string(char *s)
 {
-	char reverse = s[0];
-	int string = 0;
-	int n;
+	char *str, reverse;
+	int string = 0, a, b;
 
-	while (s[string] != '\0')
+	while (s[string] >= 0)
 	{
+		if (s[string] == '\0')
+			break;
 		string++;
-		for (n = 0; n < string; n++)
-		{
-			string--;
-			reverse = s[n];
-			s[n] = s[string];
-			s[string] = reverse;
-		}
 	}
+		for (a = 0; a < (string - 1); a++)
+		{
+			for (b = a + 1; b > 0; b--)
+			{
+				reverse = *(str + b);
+				*(str + b) = *(str + (b - 1));
+				*(str + (b - 1)) = reverse;
+			}
+		}
 }
