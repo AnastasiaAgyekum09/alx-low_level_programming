@@ -16,7 +16,7 @@ int _atoi(char *s)
 	height = 0;
 	y = 0;
 	num = 0;
-	
+
 	while (s[height] != '\0')
 		height++;
 	while (a < height && y == 0)
