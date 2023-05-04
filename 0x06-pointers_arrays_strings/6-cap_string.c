@@ -31,7 +31,7 @@ char *cap_string(char *str)
 		    str[x - 1] == '}' ||
 		    x == 0)
 			str[x] -= 32;
-			x++;
+		x++;
 	}
 	return (str);
 }
