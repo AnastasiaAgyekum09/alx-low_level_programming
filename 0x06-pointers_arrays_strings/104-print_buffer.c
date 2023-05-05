@@ -11,8 +11,9 @@
 
 void print_buffer(char *b, int size)
 {
-	int x = 0, y, z;
-
+	int x , y, z;
+	
+	x = 0;
 	if (size <= 0)
 	{
 		printf("\n");
@@ -25,9 +26,13 @@ void print_buffer(char *b, int size)
 		for (z = 0; z < 10; z++)
 		{
 			if (z < y)
+			{	
 				printf("%.2x", *(b + x + z));
-				else
-					printf(" ");
+			}
+			else
+			{	
+				printf(" ");
+			}
 			if (z % 2)
 			{
 				printf(" ");
