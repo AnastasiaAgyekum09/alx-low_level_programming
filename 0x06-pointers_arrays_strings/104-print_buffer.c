@@ -14,6 +14,7 @@ void print_buffer(char *b, int size)
 	int x , y, z;
 	
 	x = 0;
+
 	if (size <= 0)
 	{
 		printf("\n");
