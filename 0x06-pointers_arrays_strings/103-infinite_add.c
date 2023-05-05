@@ -12,12 +12,10 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a, b, c, d, e, f, g;
+	int a = 0, b = 0, c, d, e, f, g = 0;
 
-	a = 0;
 	while (*(n1 + a) != '\0')
 		a++;
-	b = 0;
 	while (*(n2 + b) != '\0')
 		b++;
 	if (a >= b)
@@ -39,7 +37,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (c > 0)
 		*(r + d) = (c % 10) + 48;
 		else
-			*(r + d) = 0;
+			*(r + d) = '0';
+		if (a > 0)
+			a--, e = *(n1 + a) - 48;
+		else
+			e = 0;
 		if (b > 0)
 			b--, f = *(n2 + b) - 48;
 		else
@@ -51,4 +53,3 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	else
 		return (r);
 }
-
