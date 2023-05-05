@@ -7,7 +7,7 @@
  * @n2: the second number
  * @r: buffer to store result
  * @size_r: it is the buffer size
- * Return: pointer to result
+ * Return: pointer to r
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -39,14 +39,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (c > 0)
 		*(r + d) = (c % 10) + 48;
 		else
-			e = 0;
+			*(r + d) = 0;
 		if (b > 0)
 			b--, f = *(n2 + b) - 48;
 		else
 			f = 0;
 		d--, size_r--;
 	}
-	if (*(r) == 0)
+	if (*(r) == '0')
 		return (r + 1);
 	else
 		return (r);
