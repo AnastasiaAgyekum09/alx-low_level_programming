@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _strspn - function that get the length of a prefix substring
- * @s: input
- * @accept: input bytes
+ * _strspn - function that locate a character in a string
+ * @s: input string
+ * @c: input character
  * Return: 0 on success
  */
 
-unsigned int _strspn(char *s, char accept)
+char *_strchr(char *s, char c)
 {
 	int x;
 
 	for (x = 0; s[x] >= '\0'; x++)
 	{
-		if (s[x] == accept)
+		if (s[x] == c)
 			return (&s[x]);
 	}
 	return (0);
