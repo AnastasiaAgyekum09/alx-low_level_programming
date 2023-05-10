@@ -2,11 +2,12 @@
 int check_pal(char *s, int x, int len);
 int _strlen_recursion(char *s);
 
-/*
- *is_palindrome - check string for palindrome
- *@s: string to input
+/**
+ * is_palindrome - function that check string for palindrome
+ *@s: string to reverse
  *Return: 1 0n success, 0 on error
  */
+
 int is_palindrome(char *s)
 {
 	if (*s == 0)
